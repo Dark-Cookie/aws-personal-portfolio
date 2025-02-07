@@ -118,7 +118,7 @@
 
 const counter = document.querySelector('.counter-number');
 async function updateCounter() {
-    let response = await fetch("https://22wur782f1.execute-api.us-east-1.amazonaws.com/items");
+    let response = await fetch("${{ secrets.API_URL }}");
     let data = await response.json();
     counter.innerHTML = `Visitors: ${data}`;
 }
